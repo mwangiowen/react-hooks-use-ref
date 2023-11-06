@@ -3,7 +3,6 @@ import { makeRandomNumber } from "../utils";
 
 function Ticker() {
   const [price, setPrice] = useState(0);
-  const [color, setColor] = useState("black");
 
   useEffect(() => {
     const id = setInterval(() => setPrice(makeRandomNumber), 1000);
@@ -15,7 +14,7 @@ function Ticker() {
   return (
     <div>
       <h1>TickerMaster</h1>
-      <h2 style={{ color: color }}>Price: ${price}</h2>
+      <h2>Price: ${price}</h2>
     </div>
   );
 }
